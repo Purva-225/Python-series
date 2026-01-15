@@ -1,4 +1,4 @@
-# Dictionary  and setin Python
+# Dictionary  and set in Python
 
 
 """to store following word meaning in python dict"""
