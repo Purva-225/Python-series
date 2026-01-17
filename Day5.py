@@ -39,5 +39,57 @@ with open("sample.txt","w") as f:
 #os.remove("doc.txt")
 
 """Create a file using py and add the txt"""
-f = open("Practice.txt", "a")
-f.close()
+with open("Practice.txt", "r") as f:
+    data = f.read()
+
+New_data = data.replace("java", "python")
+print(New_data)
+
+with open("Practice.txt", "w") as f:
+    f.write(New_data)
+
+"""Search if the word learning exist in it or not"""
+
+word = "Tech"
+with open("Practice.txt", "r") as f:
+    data = f.read()
+    if(data.find(word) != -1):
+        print("FOUND")
+    else: 
+        print("NOT FOUND")
+"""WAF on which line does learning word occurs first, print -1 if not found"""
+
+def check_for_word():
+    word = "learning"
+    data = True
+    line_no = 1
+    with open("Practice.txt", "r") as f:
+       while data:
+         data = f.readline()
+         if(word in data):
+             print(line_no)
+             line_no += 1 
+
+check_for_word()
+
+"""from the file nums separated by comma, print the even num"""
+count = 0
+with open("PracticeEven.txt", "r") as f:
+      data = f.read()
+      print(data)
+
+      """num = ""
+      for i in range(len(data)):
+       if(data[i] == ","):
+          print(num) 
+          num = ""
+       else:
+        num += data[i]"""
+      
+      nums = data.split(",")
+      for val in nums:
+            if(int(val)%2 == 0):
+                  count += 1
+
+print(count)
+
