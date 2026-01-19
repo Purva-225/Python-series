@@ -1,3 +1,4 @@
+#load img
 import cv2
 
 image = cv2.imread("python_image.png")
@@ -6,3 +7,37 @@ if image is None:
       print("Erorr: img not fount")
 else:
       print("img found sucessfully")
+
+"""to open an img"""
+
+import cv2
+
+image = cv2.imread("python_image.png")
+
+if image is not None:
+      cv2.imshow("Here's my img", image)
+      cv2.waitKey(0)
+      cv2.destroyAllWindow()
+else:
+      print("img not found")
+
+"""Image dimenstion: here will use [.shape] it is an Attribute, 
+if we want to know size nd struct [high,width or num of color channels], [[if we are training any AI MODEL]]
+FIR OUTPUT MAI 3 CHIZE AYENGI (HIGHT = 48 ANY NUM, WIDHT = 34, CHANNEL = 3(POSSIBLITY OF BGR)
+ ND IF CAHNNEL IS NOT PRESENT THEN IT CAN BE GRAYSCALE) """
+
+""Here for GRAYSCALECONVERSION: will use CVTCOLOR"""
+"""import cv2"""
+
+import cv2
+image = cv2.imread("python_image.png")
+
+if image is not None:
+    h,w,c = image.shape
+    print(f"image loaded:\n Hight:{h}\nwidth: {w}\n channel: {c}") #f = forward
+
+else:
+    print("image could not loaded")
+
+""Here for GRAYSCALECONVERSION: will use CVTCOLOR"""
+"""import cv2"""
