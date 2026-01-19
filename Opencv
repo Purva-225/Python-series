@@ -1,0 +1,8 @@
+import cv2
+
+image = cv2.imread("python_image.png")
+
+if image is None:
+      print("Erorr: img not fount")
+else:
+      print("img found sucessfully")
